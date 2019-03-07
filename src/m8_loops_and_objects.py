@@ -7,7 +7,7 @@ and also USING OBJECTS.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
          Aaron Wilkin, their colleagues, and Leo Schoch-Spana.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -38,6 +38,11 @@ def print_sequence1():
     print('Running print_sequence1:')
     print('--------------------------------------------------')
 
+# Test 1:
+    expected = 0.13416
+    answer = sequence1(3)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
 def draw_circles1():
     """
