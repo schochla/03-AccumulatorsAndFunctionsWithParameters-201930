@@ -7,8 +7,8 @@ This module demonstrates and practices:
   -- UNIT TESTING.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Leo Schoch-Spana.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import m4t_tester
 
@@ -38,7 +38,7 @@ def main():
 def run_test_sum_of_digits():
     """ Tests the  sum_of_digits   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function, as follows:
+    # DONE: 2. Implement this TEST function, as follows:
     #
     #  Step 1:  This TEST function tests the  sum_of_digits  function.
     #    So read the doc-string of the  sum_of_digits  function
@@ -69,9 +69,33 @@ def run_test_sum_of_digits():
     print('       actual:  ', answer)
 
     # -------------------------------------------------------------------------
-    # TO DO: 2 (continued).
+    # DONE: 2 (continued).
     # Below this comment, add 3 more test cases of your own choosing.
     # -------------------------------------------------------------------------
+
+    # Test 1:
+    expected = 16
+    answer = sum_of_digits(826)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 4
+    answer = sum_of_digits(1111)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 19
+    answer = sum_of_digits(25930)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = 45
+    answer = sum_of_digits(123456789)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
 
 def sum_of_digits(number):
@@ -110,7 +134,7 @@ def sum_of_digits(number):
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # DONE: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -135,8 +159,27 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
+    # Test 1:
+    expected = 9
+    answer = digits_in_cube(3)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 10
+    answer = digits_in_cube(4)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 9
+    answer = digits_in_cube(6)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
 
 def digits_in_cube(n):
+
     """
     What comes in:  A positive integer.
     What goes out:  The sum of the digits in the CUBE of the integer.
@@ -145,8 +188,11 @@ def digits_in_cube(n):
       If the integer (n) is 5    (so n cubed is 125),
       this function returns (1 + 2 + 5), which is 8.
     """
+    number = n ** 3
+    return sum_of_digits(number)
+
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -171,8 +217,28 @@ def run_test_digits_in_power():
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
 
+# Test 1:
+    expected = 8
+    answer = digits_in_power(5, 3)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+# Test 2:
+    expected = 4
+    answer = digits_in_power(11, 2)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+# Test 3:
+    expected = 19
+    answer = digits_in_power(8, 4)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
 def digits_in_power(n, k):
+    x = n ** k
+    sum_of_digits(x)
+
     """
     What comes in:  Two positive integers, n and k.
     What goes out:
@@ -183,6 +249,9 @@ def digits_in_power(n, k):
       this function returns 18
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
+
+
+
     # -------------------------------------------------------------------------
     # TODO: 6. Implement and test this function.
     #
